@@ -9,7 +9,7 @@
     <packaging>jar</packaging>
 
     <name>Prime-Spring-Boot</name>
-    <description>Demo project that show how to integrate Spring Boot, Primefaces, PrettyFaces, Embedded Tomcat
+    <description>Demo project that show how to integrate Spring Boot, Primefaces, Embedded Tomcat
     </description>
 
     <parent>
@@ -22,7 +22,8 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <java.version>1.7</java.version>
+        <java.version>1.6</java.version>
+        <tomcat.version>7.0.59</tomcat.version>
         <primefaces.version>5.2</primefaces.version>
         <primefaces.ext.version>3.2.0</primefaces.ext.version>
         <jsf.version>2.2.10</jsf.version>
@@ -50,6 +51,11 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
+            <groupId>com.sun.el</groupId>
+            <artifactId>el-ri</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>jstl</artifactId>
             <version>1.2</version>
@@ -74,27 +80,12 @@
             <version>${primefaces.version}</version>
         </dependency>
 
-        <!--Pretty Faces-->
-        <dependency>
-            <groupId>com.ocpsoft</groupId>
-            <artifactId>prettyfaces-jsf2</artifactId>
-            <version>3.3.3</version>
-        </dependency>
-
         <!--Required to solve an startup error with embedded tomcat
         (java.lang.IllegalStateException: Could not find backup for factory javax.faces.context.FacesContextFactory.)-->
         <dependency>
             <groupId>org.apache.tomcat.embed</groupId>
             <artifactId>tomcat-embed-jasper</artifactId>
         </dependency>
-
-        <!--CDI inject-->
-        <dependency>
-            <groupId>javax.inject</groupId>
-            <artifactId>javax.inject</artifactId>
-            <version>1</version>
-        </dependency>
-
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -108,6 +99,14 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                </configuration>
             </plugin>
         </plugins>
 

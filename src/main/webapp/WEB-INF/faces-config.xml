@@ -18,10 +18,6 @@
 
 	</application>
 
-	<lifecycle>
-		<phase-listener>com.ocpsoft.pretty.faces.event.MultiPageMessagesSupport</phase-listener>
-	</lifecycle>
-
 	<factory>
 		<exception-handler-factory>
 			org.primefaces.application.exceptionhandler.PrimeExceptionHandlerFactory
