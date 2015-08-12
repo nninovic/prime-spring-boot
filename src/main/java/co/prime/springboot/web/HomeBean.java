@@ -28,7 +28,7 @@ public class HomeBean {
     private HomeService homeService;
 
     private int randomNumber;
-    private String locale = "sr";//change it to sr to get text in second supported language
+    private String locale = "en";//change it to sr to get text in second supported language
 
     @URLActions(actions = {
             @URLAction(mappingId = "home", onPostback = false)
