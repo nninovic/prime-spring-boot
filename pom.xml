@@ -110,8 +110,6 @@
             </plugin>
         </plugins>
 
-        <!--this is required to enable PrettyFaces to work-->
-        <outputDirectory>src/main/webapp/WEB-INF/classes</outputDirectory>
     </build>
 
 </project>
