@@ -1,0 +1,21 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:f="http://java.sun.com/jsf/core">
+
+<f:view locale="#{homeBean.locale}">
+
+
+	<h:head>
+		<title>Rnadom Number</title>
+	</h:head>
+
+	<h:body>
+
+		<h1><h:outputText value="#{msg['title']}"/></h1>
+
+		<h:outputText value="#{msg['text']}"/>is <h:outputText value="#{homeBean.randomNumber}" style="color: red;"/>
+
+	</h:body>
+
+</f:view>
+</html>
