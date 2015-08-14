@@ -108,6 +108,19 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <!--for some reason provided scope is ignored and application can not be started with springboot:run-->
+                <configuration>
+                    <excludes>
+                        <exclude>
+                            <groupId>javax.servlet</groupId>
+                            <artifactId>javax.servlet-api</artifactId>
+                        </exclude>
+                        <exclude>
+                            <groupId>javax.el</groupId>
+                            <artifactId>el-api</artifactId>
+                        </exclude>
+                    </excludes>
+                </configuration>
             </plugin>
         </plugins>
 
